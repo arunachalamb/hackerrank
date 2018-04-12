@@ -3,6 +3,7 @@ import sys
 
 def maximumSum(a, m):
     mx = 0
+    a = [i%m for i in a]
     for i in range(1, len(a)):
         b = [sum(a[j:j+i])%m for j in range(len(a)-i+1)]
         x = max(b)
